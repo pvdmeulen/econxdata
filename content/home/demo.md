@@ -9,7 +9,7 @@ active = true  # Activate this widget? true/false
 weight = 5  # Order that this section will appear.
 
 title = "**Welcome**"
-subtitle = "This is my personal blog. I post stuff about R, economics, and data science. Reading it is optional."
+subtitle = "This is my personal blog. I post stuff about R, economics, and data science."
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.

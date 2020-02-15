@@ -24,10 +24,10 @@ social:
   link: '#contact'
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
+  link: https://twitter.com/pete_vdm
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/pvdmeulen
 superuser: true
 ---
 
