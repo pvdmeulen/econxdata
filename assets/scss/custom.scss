@@ -1,0 +1,130 @@
+// Override this file to add your own SCSS styling.
+
+// No color difference in dark odd sections
+
+.dark .home-section:nth-of-type(n) {
+	background-color: #282a36;
+}
+
+// Alerts icons
+
+div.alert-note > div:first-child::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #35a788;
+  content: "\f129";
+}
+
+div.alert-warning > div:first-child::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #f0b67f;
+  content: "\f071";
+}
+
+div.alert-version > div:first-child::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #13293d;
+  content: "\f1da";
+}
+
+div.alert-quote > div:first-child::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #dbdbdb;
+  content: "\f10d";
+}
+
+// Alert boxes
+
+div.alert > div {
+  font-size: 0.85rem;
+}
+
+.alert-note {
+  color: #333333;
+  background-color: #f0f0f0;
+  border-top: 4px solid #35a788;
+  border-radius: 0px; /*undo rounded corners*/
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  padding: 23px 10px 21px 10px;
+}
+
+
+// div.alert.alert-warning {
+.alert-warning {
+  color: #333333;
+  background-color: #f0f0f0;
+  border-top: 4px solid #f0b67f;
+  border-radius: 0px; /*undo rounded corners*/
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  padding: 23px 10px 21px 10px;
+}
+
+.alert-version {
+  color: #333333;
+  background-color: #f0f0f0;
+  border-top: 4px solid #13293d;
+  border-radius: 0px; /*undo rounded corners*/
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  padding: 23px 10px 21px 10px;
+}
+
+
+.alert-quote {
+  color: #333333;
+  background-color: none;
+  border-top: none;
+	border-left: 4px solid #dbdbdb;
+  border-radius: 0px; /*undo rounded corners*/
+  border-right-style: none;
+  border-bottom-style: none;
+  //border-left-style: none;
+  padding: 23px 10px 21px 10px;
+}
+
+// bg of code block
+
+code {
+	color: #35a788;
+  background: #ffffff;
+	padding: 2px 2px 2px 2px;
+}
+
+/* text */
+
+h1 {
+  color: #262626;
+  font-weight: 700;
+}
+
+h2 {
+  color: #35a788;
+  font-weight: 700;
+}
+
+h3, h4, h5, h6 {
+  color: #f0b67f;
+  font-weight: 700;
+}
+
+body {
+  color: #333333;
+  font-size: 0.9rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+/* Based on Bootstrap's `table-responsive` style. */
+table {
+  display: table;
+}

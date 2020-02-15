@@ -1,0 +1,230 @@
+---
+title: Multiple Axes
+author: Peter van der Meulen
+date: '2020-02-15'
+slug: Index
+categories:
+  - R
+  - Visualisation
+tags:
+  - ggplot2
+  - data
+subtitle: ''
+summary: 'Exploring the multiple axes functionality in `ggplot2`.'
+authors: []
+lastmod: '2020-02-15T14:35:00Z'
+featured: no
+df_print: paged
+image:
+  caption: 'Image credit: [**Markus Spiske**](https://unsplash.com/@markusspiske)'
+  placement: 1
+  focal_point: 'Right'
+  preview_only: no
+projects: []
+output:
+  html_document:
+    df_print: paged
+---
+
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<div id="panel-data" class="section level2">
+<h2>Panel Data</h2>
+<pre class="r"><code>require(dplyr)
+
+set.seed(1)
+
+dummyData &lt;- as_tibble(list(
+  &quot;Country&quot; = c(&quot;United Kingdom&quot;, &quot;United Kingdom&quot;, &quot;United Kingdom&quot;, 
+                &quot;New Zealand&quot;, &quot;New Zealand&quot;, &quot;New Zealand&quot;, 
+                &quot;France&quot;, &quot;France&quot;, &quot;France&quot;),
+  &quot;Year&quot; = c(2016, 2017, 2018, 2016, 2017, 2018, 2016, 2017, 2018),
+  &quot;Var1&quot; = c(rnorm(3, mean = 2),
+             rnorm(3, mean = 1),
+             rnorm(3, mean = 0)),
+  &quot;Var2&quot; = c(rnorm(3, mean = 0),
+             rnorm(3, mean = 0),
+             rnorm(3, mean = 2)),
+  &quot;Var3&quot; = c(rnorm(3, mean = -1),
+             rnorm(3, mean = 0),
+             rnorm(3, mean = 1))
+  
+))</code></pre>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Country
+</th>
+<th style="text-align:right;">
+Year
+</th>
+<th style="text-align:right;">
+Var1
+</th>
+<th style="text-align:right;">
+Var2
+</th>
+<th style="text-align:right;">
+Var3
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+United Kingdom
+</td>
+<td style="text-align:right;">
+2016
+</td>
+<td style="text-align:right;">
+1.3735462
+</td>
+<td style="text-align:right;">
+-0.3053884
+</td>
+<td style="text-align:right;">
+-0.1787788
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+United Kingdom
+</td>
+<td style="text-align:right;">
+2017
+</td>
+<td style="text-align:right;">
+2.1836433
+</td>
+<td style="text-align:right;">
+1.5117812
+</td>
+<td style="text-align:right;">
+-0.4060987
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+United Kingdom
+</td>
+<td style="text-align:right;">
+2018
+</td>
+<td style="text-align:right;">
+1.1643714
+</td>
+<td style="text-align:right;">
+0.3898432
+</td>
+<td style="text-align:right;">
+-0.0810226
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+New Zealand
+</td>
+<td style="text-align:right;">
+2016
+</td>
+<td style="text-align:right;">
+2.5952808
+</td>
+<td style="text-align:right;">
+-0.6212406
+</td>
+<td style="text-align:right;">
+0.7821363
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+New Zealand
+</td>
+<td style="text-align:right;">
+2017
+</td>
+<td style="text-align:right;">
+1.3295078
+</td>
+<td style="text-align:right;">
+-2.2146999
+</td>
+<td style="text-align:right;">
+0.0745650
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+New Zealand
+</td>
+<td style="text-align:right;">
+2018
+</td>
+<td style="text-align:right;">
+0.1795316
+</td>
+<td style="text-align:right;">
+1.1249309
+</td>
+<td style="text-align:right;">
+-1.9893517
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+France
+</td>
+<td style="text-align:right;">
+2016
+</td>
+<td style="text-align:right;">
+0.4874291
+</td>
+<td style="text-align:right;">
+1.9550664
+</td>
+<td style="text-align:right;">
+1.6198257
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+France
+</td>
+<td style="text-align:right;">
+2017
+</td>
+<td style="text-align:right;">
+0.7383247
+</td>
+<td style="text-align:right;">
+1.9838097
+</td>
+<td style="text-align:right;">
+0.9438713
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+France
+</td>
+<td style="text-align:right;">
+2018
+</td>
+<td style="text-align:right;">
+0.5757814
+</td>
+<td style="text-align:right;">
+2.9438362
+</td>
+<td style="text-align:right;">
+0.8442045
+</td>
+</tr>
+</tbody>
+</table>
+</div>

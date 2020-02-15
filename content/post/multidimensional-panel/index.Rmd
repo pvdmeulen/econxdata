@@ -1,0 +1,72 @@
+---
+title: Multiple Axes
+author: Peter van der Meulen
+date: '2020-02-15'
+slug: Index
+categories:
+  - R
+  - Visualisation
+tags:
+  - ggplot2
+  - data
+subtitle: ''
+summary: 'Exploring the multiple axes functionality in `ggplot2`.'
+authors: []
+lastmod: '2020-02-15T14:35:00Z'
+featured: no
+df_print: paged
+image:
+  caption: 'Image credit: [**Markus Spiske**](https://unsplash.com/@markusspiske)'
+  placement: 1
+  focal_point: 'Right'
+  preview_only: no
+projects: []
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+require(knitr)
+require(rmarkdown)
+require(tibble)
+
+opts_chunk$set(echo = TRUE, eval = TRUE, results = TRUE, include = FALSE, warning = FALSE, message = FALSE, fig.width = 10, fig.height = 8, out.width = "100%")
+
+source("theme.R", encoding = "UTF-8")
+```
+
+## Panel Data
+
+
+```{r dummy, include=TRUE, echo=TRUE, eval=TRUE}
+require(dplyr)
+
+set.seed(1)
+
+dummyData <- as_tibble(list(
+  "Country" = c("United Kingdom", "United Kingdom", "United Kingdom", 
+                "New Zealand", "New Zealand", "New Zealand", 
+                "France", "France", "France"),
+  "Year" = c(2016, 2017, 2018, 2016, 2017, 2018, 2016, 2017, 2018),
+  "Var1" = c(rnorm(3, mean = 2),
+             rnorm(3, mean = 1),
+             rnorm(3, mean = 0)),
+  "Var2" = c(rnorm(3, mean = 0),
+             rnorm(3, mean = 0),
+             rnorm(3, mean = 2)),
+  "Var3" = c(rnorm(3, mean = -1),
+             rnorm(3, mean = 0),
+             rnorm(3, mean = 1))
+  
+))
+```
+
+```{r dummy2, echo=FALSE, include=TRUE}
+require(kableExtra)
+
+dummyData %>%
+  kable("html") %>%
+  kable_styling(full_width = TRUE,
+                bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```

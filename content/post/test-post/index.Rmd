@@ -1,0 +1,111 @@
+---
+title: Test Post
+author: Peter van der Meulen
+date: '2020-01-18'
+slug: test-post
+categories:
+  - R
+  - Economics
+tags:
+  - R Markdown
+subtitle: 'This is a test post.'
+summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a dictum dolor.'
+authors: []
+lastmod: '2020-01-18T20:27:10Z'
+featured: no
+image:
+  caption: 'Image credit: [**Sandro Katalina**](https://unsplash.com/@sandrokatalina)'
+  focal_point: "Right"
+  placement: 1
+  preview_only: false
+projects: []
+---
+
+```{r setup, include=FALSE}
+require(knitr)
+opts_chunk$set(echo = TRUE, fig.width = 10, fig.height = 8, out.width = "100%")
+
+```
+
+**This is a test post.**
+
+These are headers:
+
+# H1 Header
+## H2 Header
+### H3 Header
+#### H4 Header
+##### H5 Header
+
+This is a horizontal rule:
+
+---
+
+Body text looks like this:
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elit leo. Etiam tempus pharetra nisl. Aliquam ut eleifend metus, nec ultrices sapien. Ut non ex eget tortor vestibulum ultrices. Nulla erat mi, pellentesque ut ante ac, imperdiet molestie massa.
+
+This is a hyperlink: [Bank of England](https://www.bankofengland.co.uk/).^[This is a footnote!]
+
+This is a block quote:
+
+> “Guess what, I have flaws. What are they? Oh, I don’t know. I sing in the shower. Sometimes I spend too much time volunteering. Occasionally, I’ll hit somebody with my car. So sue me.”
+>
+> --- Michael Scott
+
+This is an unordered list:
+
+
+* Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  + In gravida elit sed sem sollicitudin, ut ullamcorper massa finibus.
+* Aenean ultricies quam sed diam suscipit tristique et in elit.
+
+
+Text can also contain `inline code`. LaTeX-style math is also possible:
+
+${Q_s}^i = {Q_d}^i$
+
+as are code blocks:
+
+```{r, echo=TRUE, eval=FALSE}
+require(dplyr)
+head(starwars)
+```
+
+{{% alert version %}}
+This is a version box.
+{{% /alert %}}
+
+{{% alert warning %}}
+This is a warning box!
+{{% /alert %}}
+
+{{% alert note %}}
+This is an information box.
+{{% /alert %}}
+
+
+#### Including Plots
+
+Plots using `ggplot2` look like this:
+
+```{r pressure, echo=FALSE, results='hide', warning=FALSE, message=FALSE, dev.args=list(bg = "transparent"), fig.retina=2, dpi=144}
+
+source("theme.R")
+require(dplyr)
+
+ggplot(data = filter(starwars, name %in% c("Luke Skywalker", 
+                                           "Leia Organa", 
+                                           "Han Solo", 
+                                           "Yoda", 
+                                           "Darth Vader")), 
+                     aes(x = reorder(name, -height), y = height)) + 
+  geom_col(fill = exd_palette$zomp) +
+  labs(title = "Height of Star Wars characters", 
+       subtitle = "This is just for testing the look of the ggplot2 plots",
+       caption = "Only select characters from The Empire Strikes Back.", tag = "Econ x Data",
+       x = "", y = "Height (cm)") +
+  theme_exd
+```
+
+To be continued...

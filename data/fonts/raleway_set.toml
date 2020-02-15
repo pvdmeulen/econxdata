@@ -1,0 +1,10 @@
+# Font style metadata
+name = "Raleway"
+# Optional Google font URL
+google_fonts = "Raleway:400,700,800|Roboto:400,400i,700|Roboto+Mono:400"
+
+# Font families
+heading_font = "Raleway"
+body_font = "Roboto"
+nav_font = "Roboto"
+mono_font = "Roboto Mono"
