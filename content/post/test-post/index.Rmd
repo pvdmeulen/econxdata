@@ -1,17 +1,16 @@
 ---
 title: Test Post
 author: Peter van der Meulen
-date: '2020-01-18'
+date: '2020-10-10'
 slug: test-post
 categories:
-  - R
+  - Data Science
   - Economics
 tags:
   - R Markdown
 subtitle: 'This is a test post.'
 summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a dictum dolor.'
 authors: []
-lastmod: '2020-01-18T20:27:10Z'
 featured: no
 image:
   caption: 'Image credit: [**Sandro Katalina**](https://unsplash.com/@sandrokatalina)'

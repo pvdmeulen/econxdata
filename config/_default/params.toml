@@ -81,7 +81,7 @@ privacy_pack = false
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "peter.vd.meulen@outlook.com"
+email = ""
 phone = ""
 
 # Address
@@ -114,7 +114,7 @@ contact_links = [
 ############################
 
 # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
-sharing_image = "logo.svg"
+sharing_image = "logo.png"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
 twitter = "pete_vdm"

@@ -79,3 +79,5 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
 # Links
 [permalinks]
   post = "/:year/:month/:day/:slug/"
+  talk = "/:year/:month/:day/:slug/"
+  slide = "/:year/:month/:day/:slug/"

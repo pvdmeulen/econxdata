@@ -3,7 +3,7 @@
 widget = "about"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = false  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 20  # Order that this section will appear in.
+weight = 30  # Order that this section will appear in.
 
 title = "About me"
 
@@ -12,3 +12,7 @@ title = "About me"
 # See https://sourcethemes.com/academic/docs/get-started/#introduce-yourself
 author = "admin"
 +++
+
+[design.spacing]
+  # Customize the section spacing. Order is top, right, bottom, left.
+  padding = ["10px", "0", "10px", "0"]
