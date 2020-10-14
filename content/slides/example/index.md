@@ -1,15 +1,19 @@
 ---
 authors: []
-categories:
-  - slide
+categories: []
 date: "2019-02-05T00:00:00Z"
+
 slides:
   highlight_style: dracula
-  theme: black
+  theme: ../assets/css/reveal_custom.css
+  output:
+    revealjs::revealjs_presentation:
+        transition: fade
+
+title: Example Slides
 summary: An introduction to using Academic's Slides feature.
 tags:
   - Other
-title: Example Slides
 ---
 
 # Create slides in Markdown with Academic
@@ -163,3 +167,13 @@ Create `assets/css/reveal_custom.css` with:
 [Ask](https://spectrum.chat/academic)
 
 [Documentation](https://sourcethemes.com/academic/docs/managing-content/#create-slides)
+
+{{% section %}}
+
+## section 1
+
+---
+
+## section 2
+
+{{% /section %}}
