@@ -167,13 +167,3 @@ Create `assets/css/reveal_custom.css` with:
 [Ask](https://spectrum.chat/academic)
 
 [Documentation](https://sourcethemes.com/academic/docs/managing-content/#create-slides)
-
-{{% section %}}
-
-## section 1
-
----
-
-## section 2
-
-{{% /section %}}
